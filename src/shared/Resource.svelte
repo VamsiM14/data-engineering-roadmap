@@ -1,11 +1,18 @@
 <script>
     import ResourceStore from '../stores/ResourceStore.js';
+    // import CardStore from '../stores/CardStore.js';
     import Bars from './Bars.svelte';
     import Buttons from './Buttons.svelte';
+    let copiedResources = $ResourceStore;
+    let slicedResources = copiedResources.slice(0,1);
     let resources = $ResourceStore;
+    // let cardStatusObject = $CardStore;
+    // console.log(cardStatusObject);
+
+    let cardStatus = 'more';
     let img_src = ''; //shld we use export ?
     let img_alt = ''; //shld we use export ?
-    let cardStatus = 'less';
+    let presentingResources = slicedResources;
 
     const assignImgAttrForResourceType = (resource) => {
         let msg = '';
@@ -40,11 +47,19 @@
         }
     }
 
-    const ToggleShowContent = (cardStatus) => {
-        if (cardStatus ===  'less') {
-            cardStatus = 'more'
-        } else {
-            cardStatus = 'less'
+    const ToggleShowContent = (e) => {
+        
+        console.log('entered ToggleShowContent');
+        console.log(e.detail);
+        if (e.detail ===  'less') {
+            // copiedResources = copiedResources.slice(0,3)
+            presentingResources = slicedResources;
+            console.log("less >", presentingResources);
+            cardStatus = 'more';
+        } else if (e.detail === 'more') {
+            presentingResources = $ResourceStore;
+            console.log("more >", presentingResources)
+            cardStatus = 'less';
         }
     }
 
@@ -74,29 +89,7 @@
 </script>
 
 
-    {#if (cardStatus === 'less') }
-        {#each resources as resource  (resource.id)}
-            {#if (resource.id <= 3) } 
-                <div class="resource">
-                    <div class="top">
-                        <img src="{ assignImgAttrForResourceType(resource).img_src }" alt="{ assignImgAttrForResourceType(resource).img_alt }" > 
-                        <p class="resourceName"><a href="">{resource.resourceName}</a></p>
-                    </div>
-                    <div class="bottom">
-                        <img src="{ assignImgAttrForfreeResource(resource).img_src }" alt="{ assignImgAttrForfreeResource(resource).img_alt }">
-                        <div class="bars">
-                            <Bars label={"coverage"} steps={resource.coverageMeasure}/>
-                            <Bars label={"depth"} steps={resource.depthMeasure}/>
-                        </div>
-                    </div>
-                </div>
-            {/if}
-        {/each}
-        <div class="showButton">
-            <Buttons {cardStatus} on:ShowContent={ToggleShowContent}/>
-        </div>
-    
-    {:else if (cardStatus === 'more') }
+    {#each presentingResources as resource (resource.id)}
         <div class="resource">
             <div class="top">
                 <img src="{ assignImgAttrForResourceType(resource).img_src }" alt="{ assignImgAttrForResourceType(resource).img_alt }" > 
@@ -109,11 +102,11 @@
                     <Bars label={"depth"} steps={resource.depthMeasure}/>
                 </div>
             </div>
-            <div class="showButton">
-                <Buttons {cardStatus} on:ShowContent={ToggleShowContent}/>
-            </div>
-        </div> 
-    {/if}
+        </div>
+    {/each}
+    <div class="showButton">
+        <Buttons {cardStatus} on:ShowContent={ToggleShowContent}/>
+    </div>
 
 <style>
 

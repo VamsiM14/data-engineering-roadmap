@@ -4,11 +4,12 @@
     import Buttons from './Buttons.svelte';
     export let heading = '';
     import ResourceStore from '../stores/ResourceStore';
-
+    import { fade, scale, slide } from 'svelte/transition';
+//
 
 </script>
 
-<div class="card">
+<div class="card" in:fade out:fade >
     <div class="main">
         <h3 class="heading">{heading}</h3>
         <Bars label={'essentiality'} steps={3}/>

@@ -1,13 +1,16 @@
 <script>
-    export let cardStatus = 'less';
+    export let cardStatus = 'more';
     let upArrowImgPath = 'img/arrow_up.svg';
     let downArrowImgPath = 'img/arrow_down.svg';
     import { createEventDispatcher } from 'svelte';
 
     const dispatch = createEventDispatcher();
+/*Notes: 
+ () => dispatch('ShowContent', cardStatus)
+*/
 </script>
 
-<button on:click={ () => dispatch('ShowContent', cardStatus)}><img class="button" src={ cardStatus ? upArrowImgPath : downArrowImgPath }>{ cardStatus ? "Show less" : "Show more" }</button>
+<button on:click={ () => dispatch('ShowContent', cardStatus) }><img class="button" src={ cardStatus === 'more' ? downArrowImgPath : upArrowImgPath }>{ cardStatus === 'more' ? "Show more" : "Show less" }</button>
 
 
 <style>

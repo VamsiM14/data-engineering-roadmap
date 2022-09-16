@@ -28,3 +28,8 @@ const ResourceStore = writable([
 ]);
 
 export default ResourceStore;
+
+/*
+Notes:
+, CardStatusStore} 
+*/
