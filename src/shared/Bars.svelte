@@ -35,13 +35,15 @@
     }
 
     .step{
-        border: 0.15rem solid #1a73e8;
+        /* border: 0.15rem solid #1a73e8; gcp style */
+        border: 0.15rem solid #ec7211;
         width: 10px;
         height: 2px;
         margin-right: 1px;
     }
 
     .step.fill{
-        background-color: #1a73e8;
+        /* background-color: #1a73e8; */
+        background-color: #ec7211;
     }
 </style>

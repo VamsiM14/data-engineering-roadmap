@@ -9,13 +9,13 @@
 
 </script>
 
-<div class="card" in:fade out:fade >
+<div class="card">
     <div class="main">
         <h3 class="heading">{heading}</h3>
         <Bars label={'essentiality'} steps={3}/>
         <p>Querying data using SQL is an essential skill for anyone who works with data</p>
     </div>
-    <div class="resource">
+    <div class="resource" in:slide out:slide>
         <Resource />
     </div>
 

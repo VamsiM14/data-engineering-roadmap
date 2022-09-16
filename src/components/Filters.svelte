@@ -53,7 +53,8 @@
 
     button:hover{
         cursor: pointer;
-        background-color: #1a73e8;
+        /* background-color: #1a73e8; */
+        background-color: #ec7211;
         color: #eee;
     }
 
