@@ -1,6 +1,6 @@
 import { readable } from "svelte/store";
 
-const CardStore = readable([
+const CardStoreCopy = readable([
     {
         id: 1,
         skill: 'SQL',
@@ -190,4 +190,4 @@ Notes:
 , CardStatusStore} 
 */
 
-export default CardStore;
+export default CardStoreCopy;

@@ -1,8 +1,12 @@
 <script>
 import CardStore from '../stores/CardStore.js';
+import CardStoreWrite from '../stores/CardStoreWrite.js';
+import CardStoreCopy from '../stores/CardStoreCopy.js';
 
+// let copiedCardStore = $CardStore;
+let bufferMainInfo = $CardStore;
 
-let copiedMainInfo = $CardStore;
+let copiedMainInfo = bufferMainInfo;
 let presentingMainInfo = copiedMainInfo;
 
 const filterFreeResources = (MainInfo) => {
@@ -17,26 +21,37 @@ const filterFreeResources = (MainInfo) => {
     }
     
     console.log('MainInfo-after', MainInfo)
+
 };
 
+// const filterBookResources = (MainInfo) => {
+//     for (let lev2Item of MainInfo) {
+//         for (let lev3Item of lev2Item.resourceType) {
+//             lev3Item.resourceType 
+//         }
+//     }
+// };
 
 
 const handleFilter = (filterName) => {
     if (filterName === "Show All") {
-        CardStore.set(copiedMainInfo);
+        console.log('entered SHoww All')
+        CardStoreWrite.set($CardStoreCopy);
+        console.log('$cARDSTOREcopy:',$CardStoreCopy)
+        console.log('$cARDSTOREwRITE:',$CardStoreWrite)
     } else if (filterName === "Free resources") {
-        console.log('BEFORE STORE SETTING', $CardStore)
         filterFreeResources(presentingMainInfo);
         console.log(presentingMainInfo);
-        CardStore.update((i) => { return presentingMainInfo});
+        CardStoreWrite.update((i) => { return presentingMainInfo});
+
         console.log('AFTER STORE SETTING')
-        console.log($CardStore)
-    } else {
+        // console.log($CardStore)
+    } else if (filterName === "Books"){
         let a = 2;
     }
 };
 
-console.log('OOFS', $CardStore);
+// console.log('OOFS', $CardStore);
 </script>
 
 <ul class="filters">

@@ -1,26 +1,20 @@
 <script>
-    import CardStore from '../stores/CardStore.js';
     // import CardStore from '../stores/CardStore.js';
     import Bars from './Bars.svelte';
     import Buttons from './Buttons.svelte';
-    export let skillName;
-    let copiedResources = $CardStore;
+    // let copiedResources = $CardStore;
     export let resourceInfo;
-    let slicedResources = resourceInfo.slice(0,2);
-    let presentingResources = slicedResources;
-    console.log(resourceInfo, '******', slicedResources);
-
-
-    
-    // let resources = $CardStore;
-    // let cardStatusObject = $CardStore;
-    // console.log(cardStatusObject);
+    $: console.log('resourceInfo:', resourceInfo);
+    // let slicedResources = resourceInfo.slice(0,3);
+    // console.log('SLICEDRESOURCES:', slicedResources);
+    // let slicedResources = resourceInfo.slice(0,3);
+    // let slicedResources = $SlicedCardStore;
+    // $: console.log('sliced res',slicedResources);
+    $: presentingResources = resourceInfo.slice(0,3);
 
     export let cardStatus = 'more';
-    let img_src = ''; //shld we use export ?
-    let img_alt = ''; //shld we use export ?
-    // let presentingResources_Object = slicedResources.filter(_ => _.skill === skillName);
-    // console.log(presentingResources_Object);
+    let img_src = ''; //shld we use export ? --> No, confine these components to local (Resource level)
+    let img_alt = ''; //shld we use export ? -->  No, confine these components to local (Resource level)
 
     const assignImgAttrForResourceType = (resource) => {
         let msg = '';
@@ -60,7 +54,7 @@
         console.log('entered ToggleShowContent');
         console.log(e.detail);
         if (e.detail ===  'less') {
-            presentingResources = slicedResources;
+            presentingResources = presentingResources.slice(0,3);
             console.log("less >", presentingResources);
             cardStatus = 'more';
         } else if (e.detail === 'more') {

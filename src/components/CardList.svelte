@@ -3,10 +3,12 @@
 Component to hold all cards, each representing a unique skill.
 */
 import Card from '../shared/card.svelte';
-import CardStore from '../stores/CardStore.js';
+// import CardStore from '../stores/CardStore.js';
+import CardStoreWrite from '../stores/CardStoreWrite.js';
 
 //Variables
-$: copiedCardStore = $CardStore;
+$: copiedCardStore = $CardStoreWrite;
+$: console.log(copiedCardStore)
 
 let connectingImgRight = 'img/curve-right.svg'
 let connectingImgLeft = 'img/curve-left.svg'
@@ -14,6 +16,7 @@ let connectingImgLeft = 'img/curve-left.svg'
 {#each copiedCardStore as cardDetails (cardDetails.id)}
     <div class="listBody">
         <div class={ cardDetails.id % 2 === 0 ? "card even" : "card odd" }>
+            <p>{cardDetails.resouceList.length}</p>            
             <Card {cardDetails}/>
         </div>    
         <div class="connectingImg">
