@@ -66,3 +66,15 @@ img{
 	max-width: 100%;
 	height: auto;
 }
+
+.z-10{
+	z-index: 10;
+}
+
+.top-0{
+	top: 0;
+}
+
+.sticky{
+	position: sticky;
+}
