@@ -2,6 +2,9 @@
     // import CardStore from '../stores/CardStore.js';
     import Bars from './Bars.svelte';
     import Buttons from './Buttons.svelte';
+    import { fade, fly } from 'svelte/transition';
+
+
     // let copiedResources = $CardStore;
     export let resourceInfo;
     $: console.log('resourceInfo:', resourceInfo);
@@ -71,10 +74,10 @@ Notes:
 
 
     {#each presentingResources as resource (resource.id)}
-        <div class="resource">
+        <div class="resource" transition:fly="{{ y:200, duration: 500}}">
             <div class="top">
                 <img src="{ assignImgAttrForResourceType(resource).img_src }" alt="{ assignImgAttrForResourceType(resource).img_alt }" > 
-                <p class="resourceName"><a href="">{resource.resourceName}</a></p>
+                <p class="resourceName"><a href="{resource.webLink}" target="_blank">{resource.resourceName}</a></p>
             </div>
             <div class="bottom">
                 <img src="{ assignImgAttrForfreeResource(resource).img_src }" alt="{ assignImgAttrForfreeResource(resource).img_alt }">

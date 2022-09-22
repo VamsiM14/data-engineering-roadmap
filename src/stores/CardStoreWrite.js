@@ -12,7 +12,8 @@ const CardStoreWrite = writable([
             resourceName: 'Head First SQL: Your Brain on SQL - Lynn Beighley',
             freeResource: false,
             coverageMeasure: 1,
-            depthMeasure: 3
+            depthMeasure: 3,
+            webLink: "https://www.oreilly.com/library/view/head-first-sql/9780596526849/"
         },
         {
             id: 2,
@@ -20,7 +21,8 @@ const CardStoreWrite = writable([
             resourceName: 'Tutorials Point SQL tutorial - tutorials point',
             freeResource: true,
             coverageMeasure: 4,
-            depthMeasure: 3
+            depthMeasure: 3,
+            webLink: "https://www.tutorialspoint.com/sql/index.htm"
         },
         {
             id: 3,
@@ -28,7 +30,8 @@ const CardStoreWrite = writable([
             resourceName: 'Khan Academy SQL video course - interactive - Khan Academy',
             freeResource: true,
             coverageMeasure: 3,
-            depthMeasure: 3
+            depthMeasure: 3,
+            webLink: "https://www.khanacademy.org/computing/computer-programming/sql/"
         },
         {
             id: 4,
@@ -36,7 +39,8 @@ const CardStoreWrite = writable([
             resourceName: "Learning SQL: Generate, Manipulate, and Retrieve Data 3rd Edition - Alan Beaulieu",
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.oreilly.com/library/view/learning-sql-3rd/9781492057604/"
         },
         {
             id: 5,
@@ -44,7 +48,8 @@ const CardStoreWrite = writable([
             resourceName: "Code academy SQL tutorial - interactive - code academy",
             freeResource: true,
             coverageMeasure: 3,
-            depthMeasure: 2
+            depthMeasure: 2,
+            webLink: "https://www.codecademy.com/learn/learn-sql"
         },
         {
             id: 6,
@@ -52,7 +57,8 @@ const CardStoreWrite = writable([
             resourceName: "SQLbolt SQL tutorial - interactive - SQLBolt",
             freeResource: true,
             coverageMeasure: 4,
-            depthMeasure: 3
+            depthMeasure: 3,
+            webLink: "https://sqlbolt.com/"
         },
         {
             id: 7,
@@ -60,7 +66,8 @@ const CardStoreWrite = writable([
             resourceName: "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert (Udemy course) - Nassim Badaoui",
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/"
         }
         ],
         CardStatus: "more"
@@ -76,7 +83,8 @@ const CardStoreWrite = writable([
             resourceName: 'Python Crash Course: A Hands-On, Project-Based Introduction to Programming - Eric Matthes',
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 4
+            depthMeasure: 4,
+            webLink: "https://www.oreilly.com/library/view/python-crash-course/9781492071266/"
         },
         {
             id: 2,
@@ -84,7 +92,8 @@ const CardStoreWrite = writable([
             resourceName: 'Learning Python, 5th Edition - Mark Lutz',
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.oreilly.com/library/view/learning-python-5th/9781449355722/"
         },
         {
             id: 3,
@@ -92,7 +101,8 @@ const CardStoreWrite = writable([
             resourceName: 'The Python Tutorial - Python documentation',
             freeResource: true,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://docs.python.org/3/tutorial/"
         },
         {
             id: 4,
@@ -100,7 +110,8 @@ const CardStoreWrite = writable([
             resourceName: 'Learn Python Programming Masterclass - Tim Buchalka',
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.udemy.com/course/python-the-complete-python-developer-course/"
         },
         {
             id: 5,
@@ -108,7 +119,8 @@ const CardStoreWrite = writable([
             resourceName: 'Learn Python Programming (Python 3) - Jason Cannon',
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.udemy.com/course/python-programming-projects/"
         },
         {
             id: 6,
@@ -116,7 +128,8 @@ const CardStoreWrite = writable([
             resourceName: 'Python for Everybody - University Of Michigan',
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.coursera.org/specializations/python"
         },
         ],
         CardStatus: "more"
@@ -132,7 +145,8 @@ const CardStoreWrite = writable([
             resourceName: 'Database Design Course (freeCodeCamp) - Caleb Curry',
             freeResource: true,
             coverageMeasure: 5,
-            depthMeasure: 4
+            depthMeasure: 4,
+            webLink: "https://www.youtube.com/watch?v=ztHopE5Wnpc"
         },
         {
             id: 2,
@@ -140,7 +154,8 @@ const CardStoreWrite = writable([
             resourceName: "Designing Data-Intensive Applications - Martin Kleppmann",
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
         },
         {
             id: 3,
@@ -148,7 +163,8 @@ const CardStoreWrite = writable([
             resourceName: "Normalization of Database - studytonight.com",
             freeResource: true,
             coverageMeasure: 4,
-            depthMeasure: 4
+            depthMeasure: 4,
+            webLink: "https://www.studytonight.com/dbms/database-normalization.php"
         },
         {
             id: 4,
@@ -156,7 +172,8 @@ const CardStoreWrite = writable([
             resourceName: "Database Design for Mere Mortals: A Hands-On Guide to Relational Database Design - Michael Hernandez",
             freeResource: false,
             coverageMeasure: 5,
-            depthMeasure: 5
+            depthMeasure: 5,
+            webLink: "https://www.oreilly.com/library/view/database-design-for/9780133122282/"
         },
         {
             id: 5,
@@ -164,7 +181,8 @@ const CardStoreWrite = writable([
             resourceName: "DBMS Architecture: 1-Tier, 2-Tier & 3-Tier - Guru99",
             freeResource: true,
             coverageMeasure: 4,
-            depthMeasure: 3
+            depthMeasure: 3,
+            webLink: "https://www.guru99.com/dbms-architecture.html"
         },
         {
             id: 6,
@@ -172,11 +190,21 @@ const CardStoreWrite = writable([
             resourceName: "An Introduction to High Availability Computing: Concepts and Theory - David Clinton",
             freeResource: true,
             coverageMeasure: 4,
-            depthMeasure: 4
+            depthMeasure: 4,
+            webLink: "https://www.freecodecamp.org/news/high-availability-concepts-and-theory/"
         }
         ],
         CardStatus: "more"
     },
+    {
+        id: 4,
+        skill:'... To be Added',
+        essentialityMeasure: 5,
+        desc: "A lot more useful content to be added",
+        resouceList: [
+        ],
+        CardStatus: "more"
+    }
 
     // {
     //     id: 4,

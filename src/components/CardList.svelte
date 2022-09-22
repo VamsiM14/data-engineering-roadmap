@@ -13,19 +13,19 @@ $: console.log(copiedCardStore)
 let connectingImgRight = 'img/curve-right.svg'
 let connectingImgLeft = 'img/curve-left.svg'
 </script>
-{#each copiedCardStore as cardDetails (cardDetails.id)}
-    <div class="listBody">
-        <div class={ cardDetails.id % 2 === 0 ? "card even" : "card odd" }>
-            <p>{cardDetails.resouceList.length}</p>            
-            <Card {cardDetails}/>
-        </div>    
-        <div class="connectingImg">
-            <img class="mx-auto w-4/6" src={ cardDetails.id % 2 === 0 ? connectingImgLeft: connectingImgRight} alt="connectingImg">
+<div class="cardList">
+    {#each copiedCardStore as cardDetails (cardDetails.id)}
+        <div class="listBody">
+            <div class={ cardDetails.id % 2 === 0 ? "card even" : "card odd" }>         
+                <Card {cardDetails}/>
+            </div>    
+            <div class="connectingImg">
+                <img class="mx-auto w-4/6" src={ cardDetails.id % 2 === 0 ? connectingImgLeft: connectingImgRight} alt="connectingImg">
+            </div>
         </div>
-    </div>
-    
-{/each}
-
+        
+    {/each}
+</div>
 
 <style>
     img{
@@ -50,13 +50,16 @@ let connectingImgLeft = 'img/curve-left.svg'
 
     .even {
         align-self: flex-end;
-        margin-right: 60px;
+        margin-right: 100px;
     }
     
     .odd {
         align-self: flex-start;
-        margin-left: 60px;
+        margin-left: 100px;
     }
 
+    .cardList {
+        margin-top: 20px;
+    }
 
 </style>

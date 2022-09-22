@@ -10,7 +10,6 @@
 	<h1>Awesome Data Engineering</h1>
 	<p class="step_1">Learning path and resources to become a data engineer<p>
 	<p class="step_2">Best books, best courses and best articles on each subject.<p>
-	<p class="step_2">Other sections: Data engineering best books<p>
 	<p class="step_3">How to read it: First, not every subject is required to master. Look for the "essentiality" measure. Then, each resource standalone for its measurements. "coverage" and "depth" are relative to the subject of the specific resource, not the entire category.</p>
 	<Filters />
 	<!-- <Card heading={"SQL"} desc={"Querying data using SQL is an essential skill for anyone who works with data"} essentialityMeasure={4}/> -->
@@ -53,6 +52,7 @@
 		text-align: center;
 		margin-left: auto;
     	margin-right: auto;
+		position: relative;
 	}
 
 </style>
