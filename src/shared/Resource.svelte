@@ -1,18 +1,26 @@
 <script>
-    import ResourceStore from '../stores/ResourceStore.js';
+    import CardStore from '../stores/CardStore.js';
     // import CardStore from '../stores/CardStore.js';
     import Bars from './Bars.svelte';
     import Buttons from './Buttons.svelte';
-    let copiedResources = $ResourceStore;
-    let slicedResources = copiedResources.slice(0,1);
-    let resources = $ResourceStore;
+    export let skillName;
+    let copiedResources = $CardStore;
+    export let resourceInfo;
+    let slicedResources = resourceInfo.slice(0,2);
+    let presentingResources = slicedResources;
+    console.log(resourceInfo, '******', slicedResources);
+
+
+    
+    // let resources = $CardStore;
     // let cardStatusObject = $CardStore;
     // console.log(cardStatusObject);
 
-    let cardStatus = 'more';
+    export let cardStatus = 'more';
     let img_src = ''; //shld we use export ?
     let img_alt = ''; //shld we use export ?
-    let presentingResources = slicedResources;
+    // let presentingResources_Object = slicedResources.filter(_ => _.skill === skillName);
+    // console.log(presentingResources_Object);
 
     const assignImgAttrForResourceType = (resource) => {
         let msg = '';
@@ -52,40 +60,19 @@
         console.log('entered ToggleShowContent');
         console.log(e.detail);
         if (e.detail ===  'less') {
-            // copiedResources = copiedResources.slice(0,3)
             presentingResources = slicedResources;
             console.log("less >", presentingResources);
             cardStatus = 'more';
         } else if (e.detail === 'more') {
-            presentingResources = $ResourceStore;
+            presentingResources = resourceInfo;
             console.log("more >", presentingResources)
             cardStatus = 'less';
         }
     }
 
-//     const contentVisibility = (cardStatus) => {
-//     let copiedResourceStore = $ResourceStore;
-
-//     //if cardStatus == less then copiedResourceStore = copiedResourceStore[:3] 
-//     //else 
-
-// }
-
-//notes:
-//line26:   assignImgSrc().msg.
-//alt="{msg.img_src}"
-// if (! resource.freeResource) {
-    // img_src='img/dollar.svg';
-    //         img_alt='purchasable';
-    //         msg = {img_src,img_alt}
-    //         return msg;
-    //     }
-        // let msg = {img_src:'img/course.svg', img_alt:'video'};
-        // #1a73e8
-    //if cardStatus == less then 
-        //if r.id <= 3 {....} 
-    //else if cardStatus == more then 
-        //
+/*
+Notes:
+*/
 </script>
 
 
@@ -149,6 +136,10 @@
 
     a{
         color: black;
+    }
+
+    img{
+        max-width: 35px;
     }
 
 </style>

@@ -3,6 +3,7 @@
 	import Filters from './components/Filters.svelte';
 	import Bars from './shared/Bars.svelte';
 	import Card from './shared/Card.svelte';
+	import CardList from './components/CardList.svelte';
 </script>
 
 <main>
@@ -12,7 +13,8 @@
 	<p class="step_2">Other sections: Data engineering best books<p>
 	<p class="step_3">How to read it: First, not every subject is required to master. Look for the "essentiality" measure. Then, each resource standalone for its measurements. "coverage" and "depth" are relative to the subject of the specific resource, not the entire category.</p>
 	<Filters />
-	<Card heading={"SQL"}/>
+	<!-- <Card heading={"SQL"} desc={"Querying data using SQL is an essential skill for anyone who works with data"} essentialityMeasure={4}/> -->
+	<CardList/>
 	
 </main>
 
